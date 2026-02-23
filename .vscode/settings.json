@@ -1,0 +1,8 @@
+{
+    "debug.inlineValues": "on",
+    "debug.showBreakpointLog": true,
+    "debug.console.fontSize": 12,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    }
+}

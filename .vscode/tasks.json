@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Exercise-1",
+            "type": "shell",
+            "command": "g++-13",
+            "args": [
+                "-std=c++20",
+                "-g",
+                "*.cpp",
+                "-lm",
+                "-o",
+                "${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
