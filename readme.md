@@ -1,487 +1,366 @@
-🧭 PHASE 0 — Ground Rules (Read Once)
+# 🚀 Complete C++ Mastery Checklist
+## Beginner → C++17 Interview Ready → C++20 Aware
+
+> 🎯 Goal: Crack C++17 Interviews  
+> 🎯 Bonus: Confidently say you know Modern C++ (C++20 aware)  
+> 📅 Each topic includes version introduced  
+> 🔥 Includes daily industry-use concepts  
 
-Compiler & Tooling (fixed for entire journey):
+---
 
-Compiler: GCC ≥ 13 / Clang ≥ 16
+# 🟢 PHASE 1 — Core Foundation (C++98 / C++03)
 
-Standard: C++20 only
+## ✅ Program Structure (C++98)
 
-Build system: CMake
+- [ ] Structure of C++ program
+- [ ] main() function
+- [ ] Compilation process (Preprocess → Compile → Link)
+- [ ] Header files
+- [ ] Namespaces
+- [ ] Using vs fully qualified names
+- [ ] Basic I/O (cin, cout)
+- [ ] endl vs "\n"
+- [ ] Data types
+- [ ] sizeof
+- [ ] enum vs enum class (enum class C++11)
+- [ ] const correctness basics
+- [ ] typedef (using alias C++11)
 
-OS target: Linux first (portable to macOS/Windows later)
+📅 Introduced: C++98
 
-IDE: VS Code / CLion
+---
 
-Why?
-Adobe & Google care about modern, disciplined C++, not legacy tricks.
+## ✅ Control Flow (C++98)
 
-🧩 PHASE 1 — Modern C++20 Core (Deep, Not Wide)
+- [ ] if / else
+- [ ] switch
+- [ ] for / while / do-while
+- [ ] break / continue
+- [ ] Scope rules
+- [ ] Ternary operator
 
-Goal: Write clean, safe, expressive C++ without undefined behavior.
+---
 
-1.1 Language Fundamentals (C++20 mindset)
-Concepts to master
+## ✅ Functions (C++98)
 
-Translation units & ODR
+- [ ] Declaration vs definition
+- [ ] Overloading
+- [ ] Default arguments
+- [ ] Inline functions
+- [ ] Pass by value
+- [ ] Pass by reference
+- [ ] Pass by const reference
+- [ ] Function pointers
+- [ ] Pointer to member function
 
-auto, decltype(auto)
+---
 
-Uniform initialization {} pitfalls
+# 🟡 PHASE 2 — Memory, Pointers & References
 
-constexpr, consteval, constinit
+## ✅ Pointers (C++98)
 
-Value categories (lvalue, rvalue, prvalue)
+- [ ] Pointer basics
+- [ ] Dereferencing
+- [ ] Double pointer
+- [ ] new / delete
+- [ ] Memory leaks
+- [ ] Dangling pointer
+- [ ] nullptr (C++11)
 
-Copy elision & NRVO
+---
 
-explicit, =delete, =default
+## ✅ References (C++98 / C++11)
 
-Why Adobe/Google care
+### Basic
+- [ ] lvalue reference (T&)
+- [ ] const reference (const T&)
+- [ ] Lifetime extension rule
+- [ ] Why const T& binds temporary
 
-Prevents subtle ABI & performance bugs
+### Rvalue References (C++11)
+- [ ] T&&
+- [ ] std::move
+- [ ] std::forward
+- [ ] Named rvalue reference is lvalue
+- [ ] Reference collapsing rules
+- [ ] Forwarding reference
 
-STL example using this
+### In Multithreading
+- [ ] std::ref
+- [ ] std::cref
 
-std::array
+📅 Rvalue reference introduced: C++11
 
-Fixed-size, constexpr-friendly
+---
 
-Zero-overhead abstraction vs C arrays
+## ✅ Value Categories (C++11)
 
-1.2 Type System & Templates (Critical)
-Concepts
+- [ ] lvalue
+- [ ] prvalue
+- [ ] xvalue
+- [ ] glvalue
+- [ ] rvalue
+- [ ] Temporary materialization (C++17)
 
-Function templates vs class templates
+---
 
-Template specialization (partial & full)
+# 🟠 PHASE 3 — OOP & Object Lifetime
 
-Concepts (requires)
+## ✅ Classes & Objects (C++98)
 
-Type traits (std::is_*)
+- [ ] Constructors
+- [ ] Destructor
+- [ ] Member initializer list
+- [ ] const member functions
+- [ ] Static members
+- [ ] Friend
 
-SFINAE → replaced by concepts
+---
 
-std::enable_if (legacy but must know)
+## ✅ Rule of 3 / 5 / 0
 
-Key C++20 feature
-template<typename T>
-concept Serializable = requires(T a) {
-    { a.serialize() } -> std::same_as<std::string>;
-};
+- [ ] Copy constructor (C++98)
+- [ ] Copy assignment (C++98)
+- [ ] Destructor (C++98)
+- [ ] Move constructor (C++11)
+- [ ] Move assignment (C++11)
+- [ ] Rule of Zero
 
-STL example
+🔥 Interview Critical
 
-std::span
+---
 
-Template-based view
+## ✅ Inheritance & Polymorphism (C++98)
 
-Zero copy, bounds-safe
+- [ ] Virtual functions
+- [ ] Virtual destructor
+- [ ] override (C++11)
+- [ ] final (C++11)
+- [ ] Object slicing
+- [ ] Diamond problem
+- [ ] Virtual inheritance
 
-Replaces raw pointer + size pairs
+---
 
-1.3 RAII & Object Lifetime (Non-Negotiable)
-Concepts
+# 🔵 PHASE 4 — STL & Algorithms
 
-RAII pattern
+## ✅ Containers
 
-Rule of 0 / 3 / 5
+### Sequence
+- [ ] vector
+- [ ] deque
+- [ ] list
+- [ ] array (C++11)
+- [ ] forward_list (C++11)
 
-Stack vs heap lifetime
+### Associative
+- [ ] map
+- [ ] set
+- [ ] multimap
+- [ ] multiset
 
-Smart pointers (unique_ptr, shared_ptr, weak_ptr)
+### Unordered (C++11)
+- [ ] unordered_map
+- [ ] unordered_set
 
-Custom deleters
+---
 
-Move semantics
+## ✅ Iterator Mastery
 
-STL example
+- [ ] Iterator categories
+- [ ] begin / end
+- [ ] const_iterator
+- [ ] reverse_iterator
+- [ ] Invalidation rules
 
-std::unique_ptr
+---
 
-Enforces ownership
+## ✅ Algorithms (C++98)
 
-Eliminates entire class of memory leaks
+- [ ] sort
+- [ ] find
+- [ ] transform
+- [ ] accumulate
+- [ ] remove_if
+- [ ] lower_bound
+- [ ] binary_search
+- [ ] erase-remove idiom
 
-1.4 Error Handling & Contracts
-Concepts
+---
 
-Exceptions vs error codes
+## ✅ Lambda (C++11)
 
-noexcept correctness
+- [ ] Capture by value
+- [ ] Capture by reference
+- [ ] Mutable lambda
+- [ ] Generic lambda (C++14)
 
-Strong / basic exception safety
+---
 
-std::optional
+# 🟣 PHASE 5 — Modern C++ Core (C++11 → C++17)
 
-std::expected (C++23 — conceptually important)
+## ✅ auto (C++11)
 
-Assertions (assert, static_assert)
+- [ ] Type deduction rules
+- [ ] auto&
+- [ ] auto&&
 
-STL example
+---
 
-std::optional
+## ✅ Smart Pointers (C++11)
 
-Explicit absence instead of null pointers
+- [ ] unique_ptr
+- [ ] shared_ptr
+- [ ] weak_ptr
+- [ ] make_unique (C++14)
+- [ ] Custom deleter
+- [ ] Circular reference problem
 
-🧱 PHASE 2 — C++20 OOP (Industry Style)
+---
 
-Goal: Correct abstraction, not Java-style inheritance abuse.
+## ✅ Move Semantics (C++11)
 
-2.1 OOP Fundamentals (Modern C++ flavor)
-Concepts
+- [ ] Move vs Copy
+- [ ] std::move
+- [ ] Perfect forwarding
+- [ ] std::move_if_noexcept
 
-Encapsulation with value semantics
+---
 
-Composition over inheritance
+## ✅ constexpr
 
-Polymorphism via interfaces
+📅 C++11 (basic)  
+📅 C++14 (relaxed)  
+📅 C++17 (stronger)
 
-Virtual destructors
+- [ ] constexpr variable
+- [ ] constexpr function
+- [ ] constexpr constructor
+- [ ] if constexpr (C++17)
+- [ ] Compile-time recursion
+- [ ] const vs constexpr difference
 
-final, override
+---
 
-Non-virtual interface (NVI)
+## ✅ Variadic Templates (C++11)
 
-STL example
+- [ ] Parameter packs
+- [ ] Fold expressions (C++17)
 
-std::iostream
+---
 
-Polymorphic stream hierarchy
+## ✅ Type Traits (C++11)
 
-Base class interface + derived implementations
+- [ ] is_integral
+- [ ] is_same
+- [ ] enable_if
+- [ ] void_t (C++17)
 
-2.2 Interfaces & Dependency Injection
-Concepts
+---
 
-Pure abstract base classes
+## ✅ Casting Types
 
-Runtime vs compile-time polymorphism
+- [ ] C-style cast
+- [ ] static_cast
+- [ ] dynamic_cast
+- [ ] const_cast
+- [ ] reinterpret_cast
+- [ ] When dynamic_cast works
+- [ ] Safe downcasting
 
-Dependency injection (manual, no frameworks)
+---
 
-PIMPL idiom
+## ✅ C++17 Additions
 
-STL example
+- [ ] Structured bindings
+- [ ] std::optional
+- [ ] std::variant
+- [ ] std::any
+- [ ] Filesystem
+- [ ] Inline variables
+- [ ] if constexpr
 
-std::allocator
+---
 
-Injected memory strategy
+# 🔴 PHASE 6 — Multithreading (C++11+)
 
-Used everywhere in STL containers
+## ✅ Threads
 
-2.3 SOLID Principles (C++ Reality)
-Principle	C++ Interpretation
-SRP	Header/source separation
-OCP	Templates + interfaces
-LSP	No slicing, correct polymorphism
-ISP	Fine-grained interfaces
-DIP	Constructor injection
-STL example
+- [ ] std::thread
+- [ ] join
+- [ ] detach
+- [ ] RAII thread wrapper
 
-std::function
+---
 
-Type-erased callable
+## ✅ Synchronization
 
-Dependency inversion tool
+- [ ] mutex
+- [ ] lock_guard
+- [ ] unique_lock
+- [ ] recursive_mutex
+- [ ] scoped_lock (C++17)
+- [ ] condition_variable
+- [ ] atomic
+- [ ] Memory order basics
 
-⚙️ PHASE 3 — Multithreading & Concurrency (C++20 Level)
+---
 
-This is where C++ beats Java & Python.
+# 🟡 PHASE 7 — Exception Safety
 
-3.1 Threading Basics
-Concepts
+- [ ] try / catch
+- [ ] Stack unwinding
+- [ ] noexcept (C++11)
+- [ ] Strong vs Basic guarantee
+- [ ] noexcept in move constructor
 
-std::thread
+---
 
-Join vs detach
+# 🟣 PHASE 8 — C++20 Awareness
 
-Race conditions
+## ✅ Concepts (C++20)
 
-Data races vs race conditions
+- [ ] Define concept
+- [ ] requires clause
+- [ ] Replace enable_if
 
-Mutex, lock_guard, unique_lock
+---
 
-STL example
+## ✅ Three-way comparison <=> (C++20)
 
-std::mutex
+---
 
-Low-level primitive
+## ✅ Ranges (C++20)
 
-Used by most STL thread-safe components
+- [ ] views::filter
+- [ ] views::transform
 
-3.2 Modern Synchronization
-Concepts
+---
 
-std::atomic
+## ✅ consteval (C++20)
 
-Memory ordering (acquire/release/relaxed)
+---
 
-Condition variables
+## ✅ constinit (C++20)
 
-std::barrier, std::latch
+---
 
-std::jthread (C++20)
+# 🔥 FINAL INTERVIEW READINESS CHECK
 
-STL example
+You are C++17 ready if:
 
-std::atomic
+- [ ] You deeply understand object lifetime
+- [ ] You can implement a simple smart pointer
+- [ ] You understand move semantics deeply
+- [ ] You know STL internals (vector growth, map tree)
+- [ ] You understand threading basics
+- [ ] You understand references deeply
+- [ ] You can explain constexpr clearly
 
-Lock-free programming backbone
+---
 
-3.3 Thread Pools & Task Systems
-Concepts
+# 🚀 If You Complete All Above
 
-Producer–consumer
+You can confidently say:
 
-Work stealing
-
-Futures & promises
-
-Async execution models
-
-STL example
-
-std::async
-
-Simplified task abstraction
-
-🗂️ PHASE 4 — Project Structure (Maven-Level Discipline)
-
-C++ projects fail due to bad structure, not language issues.
-
-4.1 CMake (Mandatory)
-Concepts
-
-Targets, not variables
-
-Interface vs static vs shared libraries
-
-FetchContent
-
-Toolchains
-
-Presets (CMakePresets.json)
-
-Example structure
-inventory-system/
-├── CMakeLists.txt
-├── src/
-│   ├── core/
-│   ├── domain/
-│   ├── storage/
-│   └── api/
-├── include/
-├── tests/
-├── docker/
-└── third_party/
-
-STL example
-
-LLVM project
-
-Massive modular CMake setup
-
-Industry gold standard
-
-4.2 Dependency Management
-Tools
-
-vcpkg
-
-Conan
-
-Why it matters
-
-Reproducible builds (Google-level requirement)
-
-🧠 PHASE 5 — Memory Management & Leak Detection
-
-If you fail here, you fail interviews.
-
-5.1 Common Memory Bugs
-
-Use-after-free
-
-Double delete
-
-Dangling references
-
-Memory fragmentation
-
-5.2 Free Tools (Must Know)
-Tool	Purpose
-AddressSanitizer	Detect UAF, leaks
-LeakSanitizer	Memory leaks
-UndefinedBehaviorSanitizer	UB
-Valgrind	Heap analysis
-Heaptrack	Allocation profiling
-STL example
-
-std::vector
-
-Exception-safe growth
-
-Custom allocator support
-
-🧩 PHASE 6 — Design Patterns (C++-Specific)
-
-Learn why C++ implements patterns differently.
-
-Must-know patterns
-Creational
-
-Factory
-
-Abstract Factory
-
-Builder
-
-Singleton (careful!)
-
-Structural
-
-Adapter
-
-Decorator
-
-Proxy
-
-PIMPL
-
-Behavioral
-
-Strategy
-
-Observer
-
-Command
-
-State
-
-C++-specific
-
-RAII
-
-Type erasure
-
-CRTP
-
-STL examples
-Pattern	STL Example
-Iterator	All containers
-Strategy	std::sort comparator
-Observer	std::condition_variable
-Type Erasure	std::any, std::function
-🏗️ PHASE 7 — System Design for C++ Backends
-
-This is Adobe / Google territory.
-
-7.1 Core Concepts
-
-API design (header stability)
-
-ABI compatibility
-
-Zero-copy design
-
-Cache locality
-
-Latency vs throughput
-
-Lock-free vs lock-based
-
-Memory pools
-
-7.2 Inventory Management Architecture
-Components
-API Layer (REST / gRPC)
-↓
-Service Layer (business rules)
-↓
-Domain Model (Product, Order, Stock)
-↓
-Storage Adapter (Redis)
-↓
-Persistence Cache
-
-7.3 Redis Integration (C++)
-Concepts
-
-Connection pooling
-
-Serialization (JSON / Protobuf)
-
-Expiry & TTL
-
-Atomic updates (Lua scripts)
-
-Library
-
-redis-plus-plus
-
-🐳 PHASE 8 — Docker & Deployment
-Concepts
-
-Multi-stage Docker builds
-
-Static vs dynamic linking
-
-Alpine vs Ubuntu images
-
-Health checks
-
-Example
-FROM gcc:13 AS build
-FROM debian:bookworm-slim
-
-🎯 FINAL PROJECT (Capstone)
-Inventory Management System
-
-Features
-
-CRUD products
-
-Stock tracking
-
-Concurrent order processing
-
-Redis-backed persistence
-
-Thread-safe design
-
-Dockerized deployment
-
-Evaluation checklist (interview-ready)
-
-No raw new/delete
-
-Clear ownership
-
-Lock-free where possible
-
-Sanitizers clean
-
-Modular CMake
-
-Documented APIs
-
-📌 How This Cracks Adobe & Google
-
-They evaluate:
-✔ Code clarity
-✔ Ownership & lifetime
-✔ Concurrency correctness
-✔ Build discipline
-✔ Design tradeoffs
-
-This roadmap hits all of them.
-
-If you want, next I can:
-
-Break this into a 12-week daily study plan
-
-Design the exact inventory system class diagram
-
-Provide interview-grade C++ design questions based on this roadmap
-
-Just tell me how deep you want to go 🔥
+"I am strong in C++17 and familiar with modern C++20 features including concepts and ranges."
