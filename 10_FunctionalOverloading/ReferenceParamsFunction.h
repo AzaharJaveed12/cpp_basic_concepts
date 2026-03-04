@@ -1,4 +1,3 @@
-void square(int &n);
 /*
    when some one needs to call this methods he uses :
     square(int &n)  --->      square(x)
@@ -7,9 +6,8 @@ void square(int &n);
     compiler gets confused which one to call and throws compilation error.
 
 */
-
-
 // void square(int n);
+void square(int &n);
 void square(const int& n);
 
 void cube(const int& n);

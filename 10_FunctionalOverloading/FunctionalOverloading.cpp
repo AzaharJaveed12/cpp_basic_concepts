@@ -24,7 +24,7 @@ void printAge(double age) {
     cout << "[overloaded] double-age  ::" << age <<"\n";
 }
 
-void printAgeDetails(string str) {
+void printAge(string str) {
     cout <<"[optionalParams] string ::" << str << "\n";
 }
 
@@ -56,14 +56,15 @@ void cube(const int& x) {
 }
 
 int main() {
-   // OpetionalParamsFunction.h
+   // ================  OpetionalParamsFunction.h ==========================
     int ageI = 4;
     printAge(ageI);        // No error
     double ageD{5.5};
     printAge(ageD);        // no Error
-    // printAge();          // Error
-    printAgeDetails("abcd");
+    printAge("xyz");       // no Error
+   // printAge();            // 3 qualiifiers for this defination as int, double , string are optional params.
     
+
     // PointerParemsFunctions.h
     int x{5} , y{6};
     min(x,y);  
