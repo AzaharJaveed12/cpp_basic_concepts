@@ -12,19 +12,19 @@
 
 ## ✅ Program Structure (C++98)
 
-- [ ] Structure of C++ program
-- [ ] main() function
-- [ ] Compilation process (Preprocess → Compile → Link)
-- [ ] Header files
-- [ ] Namespaces
-- [ ] Using vs fully qualified names
-- [ ] Basic I/O (cin, cout)
-- [ ] endl vs "\n"
-- [ ] Data types
-- [ ] sizeof
-- [ ] enum vs enum class (enum class C++11)
-- [ ] const correctness basics
-- [ ] typedef (using alias C++11)
+- [✅ ] Structure of C++ program
+- [ ✅] main() function
+- [ ✅] Compilation process (Preprocess → Compile → Link)
+- [ ✅] Header files
+- [ ✅] Namespaces
+- [ ✅] Using vs fully qualified names
+- [ ✅] Basic I/O (cin, cout)
+- [✅] endl vs "\n"
+- [✅] Data types
+- [✅] sizeof
+- [✅] enum vs enum class (enum class C++11)
+- [✅ ] const correctness basics
+- [✅] typedef (using alias C++11)
 
 📅 Introduced: C++98
 
@@ -32,26 +32,26 @@
 
 ## ✅ Control Flow (C++98)
 
-- [ ] if / else
-- [ ] switch
-- [ ] for / while / do-while
-- [ ] break / continue
-- [ ] Scope rules
-- [ ] Ternary operator
+- [✅] if / else
+- [✅] switch
+- [✅] for / while / do-while
+- [✅] break / continue
+- [✅] Scope rules
+- [✅] Ternary operator
 
 ---
 
 ## ✅ Functions (C++98)
 
-- [ ] Declaration vs definition
-- [ ] Overloading
-- [ ] Default arguments
-- [ ] Inline functions
-- [ ] Pass by value
-- [ ] Pass by reference
-- [ ] Pass by const reference
-- [ ] Function pointers
-- [ ] Pointer to member function
+- [✅] Declaration vs definition
+- [✅] Overloading
+- [✅] Default arguments
+- [✅] Inline functions -- 🧐
+- [✅] Pass by value
+- [✅] Pass by reference
+- [✅] Pass by const reference
+- [✅] Function pointers
+- [✅] Pointer to member function
 
 ---
 

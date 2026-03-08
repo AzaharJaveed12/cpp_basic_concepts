@@ -1,7 +1,20 @@
 #include<iostream>
+#include <functional>
 
 using namespace std;
+class Math  {
+private:
+    int x , y;
+    function<int()> lambda = [this]() {
+        return x + y;
+    };
+public:
+    Math(int x , int y): x{x} , y{y} {}
 
+    int add() {
+        return lambda();
+    }
+};
 int main () {
     int a = 5;
     int b = 10;
@@ -44,5 +57,7 @@ int main () {
     funce(a,b);
     funcf();
 
+    Math math(4,5);
+    cout << math.add() << " <-- math.add calls lambda which is privatre\n";
     return 0;
 }
